@@ -17,6 +17,9 @@ class OpensslAT10 < Formula
   keg_only :provided_by_macos,
     "Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries"
 
+  def prefer_64_bit
+  end
+
   def install
     # OpenSSL will prefer the PERL environment variable if set over $PATH
     # which can cause some odd edge cases & isn't intended. Unset for safety,
